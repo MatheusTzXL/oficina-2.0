@@ -1,11 +1,103 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+body {
+    background-color: #f7fafc; 
+    font-family: 'Inter', sans-serif; 
+}
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+h1, h2 {
+    font-family: 'Poppins', sans-serif; 
+}
+
+.container {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px; 
+}
+
+h1 {
+    color: #2d3748; 
+    font-size: 2rem;
+    margin-bottom: 2rem; 
+}
+
+button {
+    background-color: #4C51BF; 
+    color: white;
+    padding: 0.75rem 1.5rem; 
+    border-radius: 8px; 
+    font-size: 1rem;
+    font-weight: 600; 
+    transition: all 0.3s ease; 
+}
+
+button:hover {
+    background-color: #434190; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transform: translateY(-2px); 
+}
+
+input, select, textarea {
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #E2E8F0;
+    width: 100%;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    margin-bottom: 1.25rem;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #4C51BF;
+    outline: none;
+}
+
+section {
+    margin-bottom: 3rem; 
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem; 
+    }
+
+    h1 {
+        font-size: 1.5rem; 
+    }
+
+    button {
+        width: 100%; 
+    }
+}
+
+
+.orcamento-list {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 500px;
+    overflow-y: auto; 
+}
+
+
+.orcamento-item {
+    padding: 1rem;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.orcamento-item:last-child {
+    border-bottom: none;
+}
+
+.orcamento-item:hover {
+    background-color: #f7fafc; 
 }
